@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100vh;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.nav-link:hover {
+    background-color: #34495e;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    width: calc(100% - 220px);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#add-product {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+#add-product:hover {
+    background-color: #2ecc71;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #2980b9;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.actions button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 2px;
+}
+
+.actions button:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;            /* Asegura que el contenedor del carrusel ocupe el 100% del ancho */
+    max-width: 300px;       /* Ajusta según el tamaño máximo deseado para el contenedor */
+    height: 200px;          /* Ajusta según el tamaño máximo deseado para el contenedor */
+    overflow: hidden;       /* Esconde el desbordamiento del contenedor */
+    margin: 0 auto;         /* Centra el contenedor horizontalmente */
+}
+
+.carousel-item img {
+    max-height: 60%;       /* Ajusta la altura máxima de la imagen al 100% del contenedor */
+    max-width: 60%;        /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+    object-fit: contain;    /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+    display: block;         /* Asegura que la imagen se renderice como un bloque */
+    margin: 0 auto;         /* Centra la imagen dentro del contenedor */
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-inner .carousel-item {
+    display: none;
+}
+
+.carousel-inner .carousel-item.active {
+    display: block;
+}
