@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/obtener_productos');
+            const response = await fetch('https://pystore-interens-7.onrender.com/obtener_productos');
             const products = await response.json();
             displayProducts(products);
         } catch (error) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchImages = async (productId) => {
         try {
-            const response = await fetch(`http://localhost:5000/obtener_todas_imagen?id_producto=${productId}`);
+            const response = await fetch(`https://pystore-interens-7.onrender.com/obtener_todas_imagen?id_producto=${productId}`);
             return await response.json();
         } catch (error) {
             console.error('Error fetching images:', error);
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (index === 0) {
                 div.classList.add('active');
             }
-            div.innerHTML = `<img src="http://localhost:5000/foto/${image.url_imagen}" class="d-block w-100" alt="...">`;
+            div.innerHTML = `<img src="https://pystore-interens-7.onrender.com/foto/${image.url_imagen}" class="d-block w-100" alt="...">`;
             carouselInner.appendChild(div);
         });
     };
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Product:', product);
     
         try {
-            const response = await fetch(`http://localhost:5000/producto/${id}`, {
+            const response = await fetch(`https://pystore-interens-7.onrender.com/producto/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(product)
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Verificar si el usuario confirmó la eliminación
         if (confirmed) {
             try {
-                const response = await fetch(`http://localhost:5000/Eliminarproducto/${id}`, {
+                const response = await fetch(`https://pystore-interens-7.onrender.com/Eliminarproducto/${id}`, {
                     method: 'DELETE'
                 });
                 if (!response.ok) throw new Error('Failed to delete product');
